@@ -21,4 +21,11 @@
 
     <string name="active_edge_app_select_title">App wählen</string>
     <string name="active_edge_activity_select_title">Aktion wählen</string>
+
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Farbwahl</string>
+    <string name="press_color_to_apply">Farbe unten antippen, um diese anzuwenden</string>
+    <string name="set">Einstellen</string>
+    <string name="color_default">Standard</string>
+
 </resources>
