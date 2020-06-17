@@ -107,7 +107,7 @@ public class ColorPickerPreference extends Preference implements
         setOnPreferenceClickListener(this);
         if (attrs != null) {
             mAlphaSliderEnabled = attrs.getAttributeBooleanValue(null, "alphaSlider", false);
-            mShowReset = attrs.getAttributeBooleanValue(SETTINGS_NS, "showReset", false);
+            mShowReset = attrs.getAttributeBooleanValue(SETTINGS_NS, "showReset", true);
             mShowPreview = attrs.getAttributeBooleanValue(SETTINGS_NS, "showPreview", true);
             int defVal = attrs.getAttributeIntValue(ANDROIDNS, "defaultValue", DEF_VALUE_DEFAULT);
             if (defVal != DEF_VALUE_DEFAULT) {
@@ -155,7 +155,6 @@ public class ColorPickerPreference extends Preference implements
         if (widgetFrameView == null)
             return;
 
-        ImageView defView = new ImageView(getContext());
         widgetFrameView.setOrientation(LinearLayout.HORIZONTAL);
 
         // remove already created default button
@@ -171,6 +170,9 @@ public class ColorPickerPreference extends Preference implements
             }
         }
 
+        if (!isEnabled()) return;
+
+        ImageView defView = new ImageView(getContext());
         widgetFrameView.addView(defView);
         widgetFrameView.setMinimumWidth(0);
         defView.setBackground(getContext().getDrawable(R.drawable.ic_settings_backup_restore));
@@ -199,7 +201,6 @@ public class ColorPickerPreference extends Preference implements
         if (!mShowReset || mView == null)
             return;
 
-        ImageView iView = new ImageView(getContext());
         LinearLayout widgetFrameView = ((LinearLayout) mView
                 .findViewById(android.R.id.widget_frame));
         if (widgetFrameView == null)
@@ -220,6 +221,10 @@ public class ColorPickerPreference extends Preference implements
                 widgetFrameView.removeView(preview);
             }
         }
+
+        if (!isEnabled()) return;
+
+        ImageView iView = new ImageView(getContext());
         widgetFrameView.addView(iView);
         widgetFrameView.setMinimumWidth(0);
         final int size = (int) getContext().getResources().getDimension(R.dimen.oval_notification_size);
@@ -227,22 +232,13 @@ public class ColorPickerPreference extends Preference implements
                 (mValue - 0x101010) : mValue;
         iView.setImageDrawable(createOvalShape(size, 0xFF000000 + imageColor));
         iView.setTag("preview");
-        /*iView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (mEnabled) {
-                    showDialog(null);
-                }
-            }
-        });
     }
 
     @Override
-    public void setEnabled(boolean enabled) {
+    public void setEnabled (boolean enabled) {
         super.setEnabled(enabled);
-        if (mEnabled != enabled) {
-            mEnabled = enabled;
-        }*/
+        setPreviewColor();
+        setDefaultButton();
     }
 
     @Override
