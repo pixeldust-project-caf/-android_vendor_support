@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2022 The PixelDust Project
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Farbauswahl</string>
+    <string name="press_color_to_apply">Zum Anwenden auf die Farbe unten tippen</string>
+    <string name="arrow_right">→</string>
+    <string name="arrow_down">↓</string>
+    <string name="hex">Hex:</string>
+    <string name="hex_hint">#ff000000</string>
+    <string name="set">Setzen</string>
+    <string name="color_default">Standard</string>
+    <string name="edit_hint">Wert</string>
+    <string name="seek_value_edit_label">Wert setzen</string>
+
+    <string name="dlg_ok">OK</string>
+    <string name="reset">Zurücksetzen</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="default_text">Standard</string>
+
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Wert: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">standardmäßig</string>
+    <string name="custom_seekbar_default_value_to_set">Standardwert: <xliff:g id="v">%s</xliff:g>\nLange drücken, um festzusetzen</string>
+    <string name="custom_seekbar_default_value_is_set">Standardwert wurde gesetzt</string>
+</resources>
