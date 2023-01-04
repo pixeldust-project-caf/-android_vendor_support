@@ -23,12 +23,18 @@
     <string name="arrow_right">→</string>
     <string name="arrow_down">↓</string>
     <string name="hex">Hex:</string>
-    <string name="hex_hint">#ff000000</string>
+    <string name="hex_hint" translatable="false">#ff000000</string>
+    <string name="hex_check_button_text">PREVIEW</string>
+    <string name="hex_reset_button_text">RESET</string>
     <string name="set">Set</string>
     <string name="color_default">Default</string>
     <string name="edit_hint">Value</string>
     <string name="seek_value_edit_label">Set value</string>
+    <string name="color_right_arrow" translatable="false">"→"</string>
+    <string name="color_down_arrow" translatable="false">"↓"</string>
+    <string name="longpress_info">Longpress box to save color</string>
 
+    <string name="ok">OK</string>
     <string name="dlg_ok">OK</string>
     <string name="reset">Reset</string>
     <string name="cancel">Cancel</string>

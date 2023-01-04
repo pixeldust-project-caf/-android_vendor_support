@@ -23,12 +23,15 @@
     <string name="arrow_right">→</string>
     <string name="arrow_down">↓</string>
     <string name="hex">Hex:</string>
-    <string name="hex_hint">#ff000000</string>
+    <string name="hex_check_button_text">VORSCHAU</string>
+    <string name="hex_reset_button_text">RESET</string>
     <string name="set">Setzen</string>
     <string name="color_default">Standard</string>
     <string name="edit_hint">Wert</string>
     <string name="seek_value_edit_label">Wert setzen</string>
+    <string name="longpress_info">Um Farbe zu speichern, lange auf die Box drücken</string>
 
+    <string name="ok">OK</string>
     <string name="dlg_ok">OK</string>
     <string name="reset">Zurücksetzen</string>
     <string name="cancel">Abbrechen</string>
