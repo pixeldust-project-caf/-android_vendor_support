@@ -40,9 +40,9 @@ public class ColorPickerDialog extends AlertDialog implements ColorPickerView.On
     private ColorPickerPanelView mNewColor;
     private EditText mHex;
     
-    private boolean mShowLedPreview;
+    //private boolean mShowLedPreview;
  
-    private NotificationManager mNoMan;
+    //private NotificationManager mNoMan;
     private Context mContext;
 
     private OnColorChangedListener mListener;
@@ -55,7 +55,7 @@ public class ColorPickerDialog extends AlertDialog implements ColorPickerView.On
         super(context);
         
         mContext = context;
-        mShowLedPreview = showLedPreview;
+        //mShowLedPreview = showLedPreview;
 
         init(initialColor);
     }
@@ -72,8 +72,8 @@ public class ColorPickerDialog extends AlertDialog implements ColorPickerView.On
 
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(
                 Context.LAYOUT_INFLATER_SERVICE);
-        mNoMan = (NotificationManager)
-                mContext.getSystemService(Context.NOTIFICATION_SERVICE);        
+        /*mNoMan = (NotificationManager)
+                mContext.getSystemService(Context.NOTIFICATION_SERVICE);*/       
 
         assert inflater != null;
         View layout = inflater.inflate(R.layout.dui_dialog_color_picker, null);
@@ -126,15 +126,15 @@ public class ColorPickerDialog extends AlertDialog implements ColorPickerView.On
     }
 
     private void showLed(int color) {
-        if (mShowLedPreview) {
+        /*if (mShowLedPreview) {
             mNoMan.forceShowLedLight(color);
-        }
+        }*/
     }
 
     private void switchOffLed() {
-        if (mShowLedPreview) {
+        /*if (mShowLedPreview) {
             mNoMan.forceShowLedLight(0);
-        }
+        }*/
     }
 
     void setAlphaSliderVisible(boolean visible) {
